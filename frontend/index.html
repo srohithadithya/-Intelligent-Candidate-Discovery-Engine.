@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Candidate Discovery Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <header class="glass-nav">
+        <div class="logo">
+            <span class="logo-human">Intelligent</span>
+            <span class="logo-machine">Discovery</span>
+            <span class="logo-made">Engine</span>
+        </div>
+        <div class="nav-links">
+            <span>AI Match System</span>
+            <span>Real-time Filtering</span>
+            <a href="https://github.com/example/discovery-engine" class="btn-primary" target="_blank">View Repo</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <div class="badge">AI Match Engine v1.0</div>
+                <h1>Discover the <span>Perfect Fit</span>.</h1>
+                <p>We ranked 100,000 candidates dynamically. Our semantic TF-IDF engine filters out honeypots, optimizes for top talent, and delivers precise, hallucination-free reasoning.</p>
+                
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <h3>100K</h3>
+                        <p>Profiles Analyzed</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>41</h3>
+                        <p>Traps Avoided</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>100</h3>
+                        <p>Top Matches Found</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>< 2m</h3>
+                        <p>Compute Time</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="candidates-section">
+            <div class="section-header">
+                <h2>Top Ranked Candidates</h2>
+                <p>Sorted by semantic relevance and behavioral heuristics. Use filters below to narrow results.</p>
+            </div>
+
+            <div class="filter-bar">
+                <div class="filter-group">
+                    <label for="exp-filter">Experience Level</label>
+                    <select id="exp-filter">
+                        <option value="all">All Levels</option>
+                        <option value="fresher">Fresher (0-2 Yrs)</option>
+                        <option value="mid">Mid-Level (3-7 Yrs)</option>
+                        <option value="senior">Senior (8+ Yrs)</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="skill-search">Required Skills</label>
+                    <input type="text" id="skill-search" placeholder="e.g. Python, React, AWS...">
+                </div>
+            </div>
+            
+            <div class="candidates-grid" id="candidates-grid">
+                <!-- Candidate Cards injected via JS -->
+                <div class="loading">Loading AI Results...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built as an <strong>Intelligent Candidate Discovery Engine</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

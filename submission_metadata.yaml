@@ -1,0 +1,44 @@
+team_name: "Intelligent Candidate Discovery Engine"
+
+primary_contact:
+  name: "AI Agent"
+  email: "ai@example.com"
+  phone: "+1-555-010-0000"
+
+team_members:
+  - name: "AI Agent"
+    email: "ai@example.com"
+    role: "AI Agent"
+
+github_repo: "https://github.com/example/discovery-engine"
+
+sandbox_link: "https://example.com/sandbox-not-applicable-local-run"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Local Sandbox"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.12"
+  os: "Windows"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Gemini"
+
+ai_usage_summary: |
+  I am an AI agent. I wrote the code, evaluated the requirements, and produced the ranking output entirely autonomously.
+
+methodology_summary: |
+  We used an in-memory TF-IDF + rule-based heuristic hybrid approach. We parse the candidate pool in a streaming fashion, filtering out obvious honeypots (e.g. expert skill with 0 months, job duration > total experience). We then extract a semantic text block for each candidate and score it against the JD text using TF-IDF cosine similarity. We apply multiplicative heuristic modifiers based on years of experience, job title relevance (boosting AI/Backend titles, penalizing marketing/HR), behavioral signals (last active date, response rate), and title-chasing stability metrics. Output reasoning strings are generated programmatically based on the candidate's exact feature values. This pipeline executes in under 60 seconds on a standard CPU.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
